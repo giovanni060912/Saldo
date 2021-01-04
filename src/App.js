@@ -37,6 +37,7 @@ import MessageIcon from "@material-ui/icons/Message";
 import DateRangeIcon from "@material-ui/icons/DateRange";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
+import Logos from "./Logos.png";
 
 const drawerWidth = 140;
 
@@ -54,6 +55,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up("sm")]: {
       width: `calc(100% - ${drawerWidth}px)`,
       marginLeft: drawerWidth,
+      backgroundColor: "white",
     },
   },
   menuButton: {
@@ -86,11 +88,12 @@ function ResponsiveDrawer(props) {
   const drawer = (
     <div>
       <div className={classes.toolbar} />
+      <img src={Logos} />
       <Divider />
       <List>
         {["", ""].map((text, index) => (
           <ListItem button key={text}>
-            <ListItemIcon>
+            <ListItemIcon style={{ color: "#172765" }}>
               {index % 2 === 0 ? <HomeIcon /> : <PieChartIcon />}
             </ListItemIcon>
             <ListItemText primary={text} />
@@ -100,7 +103,7 @@ function ResponsiveDrawer(props) {
       <List>
         {["", ""].map((text, index) => (
           <ListItem button key={text}>
-            <ListItemIcon>
+            <ListItemIcon style={{ color: "#172765" }}>
               {index % 2 === 0 ? <TrendingUpIcon /> : <LocalAtmIcon />}
             </ListItemIcon>
             <ListItemText primary={text} />
@@ -110,7 +113,7 @@ function ResponsiveDrawer(props) {
       <List>
         {["", ""].map((text, index) => (
           <ListItem button key={text}>
-            <ListItemIcon>
+            <ListItemIcon style={{ color: "#172765" }}>
               {index % 2 === 0 ? <PeopleOutlineIcon /> : <PhoneIphoneIcon />}
             </ListItemIcon>
             <ListItemText primary={text} />
@@ -120,7 +123,7 @@ function ResponsiveDrawer(props) {
       <List>
         {["", ""].map((text, index) => (
           <ListItem button key={text}>
-            <ListItemIcon>
+            <ListItemIcon style={{ color: "#172765" }}>
               {index % 2 === 0 ? <PaymentIcon /> : <LibraryBooksIcon />}
             </ListItemIcon>
             <ListItemText primary={text} />
@@ -131,7 +134,7 @@ function ResponsiveDrawer(props) {
       <List>
         {["", ""].map((text, index) => (
           <ListItem button key={text}>
-            <ListItemIcon>
+            <ListItemIcon style={{ color: "#172765" }}>
               {index % 2 === 0 ? <BuildIcon /> : <HelpIcon />}
             </ListItemIcon>
             <ListItemText primary={text} />
@@ -159,28 +162,30 @@ function ResponsiveDrawer(props) {
             <MenuIcon />
           </IconButton>
           <Grid container justify="space-around" alignItems="flex-start">
-            <Typography noWrap>
-              <h3> Edmilson Suzano Coutinho Júnior</h3>
+            <Typography noWrap style={{ color: "mediumpurple" }}>
+              <h3 style={{ color: "mediumpurple" }}>
+                Edmilson Suzano Coutinho Júnior
+              </h3>
               Ag. 00005-1 C.C. 00000000000000000020-1
             </Typography>
-            <Typography noWrap>
-              <h4>Saldo</h4>
+            <Typography noWrap style={{ color: " #69D531" }}>
+              <h4 style={{ color: "#172765" }}>Saldo</h4>
               R$100.000.000,00
             </Typography>
             <div direction="row">
-              <input style={{ padding: 4 }}></input>
+              <input style={{ padding: 5 }} placeholder="pesquisar"></input>
               <button>
                 <SearchIcon fontSize="small" />
               </button>
             </div>
-            <div>
-              <button>
+            <div style={{ color: "#172765" }}>
+              <button style={{ color: "#172765" }}>
                 <MessageIcon />
               </button>
-              <button>
+              <button style={{ color: "#172765" }}>
                 <DateRangeIcon />
               </button>
-              <button>
+              <button style={{ color: "#172765" }}>
                 <NotificationsIcon />
               </button>
               <AccountCircleIcon fontSize="large" />
@@ -221,13 +226,13 @@ function ResponsiveDrawer(props) {
       </nav>
       <main className={classes.content}>
         <div className={classes.toolbar} />
-        <Grid container justify="space-around">
+        <Grid container justify="space-around" style={{ color: "#172765" }}>
           <Grid>
             <h3>
               Conta Corrente
               <VisibilityOffIcon fontSize="small" />
             </h3>
-            R$100.000.000,00
+            <h4 style={{ color: " #69D531" }}> R$100.000.000,00 </h4>
           </Grid>
           <Grid>
             <h3>
@@ -238,7 +243,7 @@ function ResponsiveDrawer(props) {
             <h3>
               C.C. Ed. Suzano <VisibilityOffIcon fontSize="small" />
             </h3>
-            R$1.000,20
+            <h4 style={{ color: " #69D531" }}> R$1.000,20 </h4>
           </Grid>
           <Grid>
             <h3>
@@ -250,13 +255,13 @@ function ResponsiveDrawer(props) {
               C.C. Residencial Figma Ômega
               <VisibilityOffIcon fontSize="small" />
             </h3>
-            -R$0,06
+            <h4 style={{ color: " red" }}> -R$0,06 </h4>
           </Grid>
           <Grid>
             <h3>
               C.C. Ed. Suzano <VisibilityOffIcon fontSize="small" />
             </h3>
-            R$1.000,20
+            <h4 style={{ color: " #69D531" }}> R$1.000,20 </h4>
           </Grid>
         </Grid>
         <Divider />
@@ -267,20 +272,23 @@ function ResponsiveDrawer(props) {
                 <h2>Saldo Bancário</h2>
               </Grid>
               <button>
-                <PrintIcon fontSize="large" />
+                <PrintIcon fontSize="large" style={{ color: "#172765" }} />
               </button>
               <button>
-                <AssignmentReturnedIcon fontSize="large" />
+                <AssignmentReturnedIcon
+                  fontSize="large"
+                  style={{ color: "#172765" }}
+                />
               </button>
               <button>
-                <ShareIcon fontSize="large" />
+                <ShareIcon fontSize="large" style={{ color: "#172765" }} />
               </button>
             </Grid>
           </Grid>
         </div>
         <Divider />
-        <button style={{ width: 230 }}>
-          <h3>Data do Saldo</h3>
+        <button style={{ width: 230 }} style={{ color: "#172765" }}>
+          <h3 style={{ color: "#622EE5" }}>Data do Saldo</h3>
           <h4>
             07/12/2020 <KeyboardArrowDownIcon fontSize="large" />
           </h4>
@@ -292,7 +300,7 @@ function ResponsiveDrawer(props) {
           <h4>
             Saldo disponível <VisibilityOffIcon fontSize="small" />
           </h4>
-          R$100.000.000,00
+          <h5 style={{ color: " #69D531" }}> R$100.000.000,00 </h5>
         </button>
       </main>
     </div>
